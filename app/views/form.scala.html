@@ -1,0 +1,12 @@
+
+@import views.html.helper
+
+@(userForm: Form[User])
+
+@helper.form(action = routes.Application.submit()) {
+    
+    @helper.inputText(userForm("user"))
+    @helper.inputText(userForm("password")) 
+    
+    <input type="submit" value="send" />
+}
